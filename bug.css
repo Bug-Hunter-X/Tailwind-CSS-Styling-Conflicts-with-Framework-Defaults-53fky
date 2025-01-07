@@ -1,0 +1,3 @@
+This error occurs when using Tailwind CSS with a framework that uses a different CSS methodology, leading to unexpected styles. For example, conflicting styles between Tailwind's utility classes and the framework's default styles.
+
+Example: If a framework applies a default margin to all elements, and you try to override it using Tailwind's `m-0` class, the framework's margin might still be applied due to its higher specificity.
