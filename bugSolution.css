@@ -1,0 +1,40 @@
+/* bug.css */
+.my-element {
+  margin: 10px; /* Framework's default margin */
+}
+
+/* bugSolution.css */
+.my-element {
+  margin: 10px !important;/*Using !important - Not recommended*/
+}
+
+/* OR */
+
+.my-element {
+  margin: 0px;
+}
+
+/* OR */
+
+.my-element {
+   margin: 0 !important;
+}
+/* Using Tailwind's `m-0` class with increased specificity */
+.my-element { @apply m-0; /* This will work fine, most of the time */ }
+
+/* OR - Overriding framework default styles */
+.my-element {
+  margin: 0;
+}
+
+/*Adding it to the tailwind.config.js file, to handle globally*/
+module.exports = {
+  theme: {
+    extend: {
+      margin: {
+        '0': '0',
+      },
+    },
+  },
+}
+
